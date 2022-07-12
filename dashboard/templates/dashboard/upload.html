@@ -1,0 +1,66 @@
+{% extends 'dashboard/index.html' %} {% block title %}Prześlij nowe zdjęcie{% endblock %}
+{% block head %}
+    {% load static %}
+    <script src = "{% static 'js/upload.js' %}"></script>
+{% endblock %}
+<body>
+    <header>
+        {% block header %}
+            <img src="{% static 'img/logo.png' %}">
+            <p>Kliknij na zdjęcie, aby przesłać nowe!</p>
+            <p id = 'btn'><a href = '../logout/'>Wyloguj się</a><p>
+        {% endblock %}
+    </header>
+    <section>
+        {% block content %}
+            <div id= 'grid1' class = 'grid'>
+                <img src = "{% static 'img/uploaded_img/1.jpg' %}">
+                <form method="post" enctype="multipart/form-data" id = 'form1'>
+                    {% csrf_token %}
+                      {{form}}
+                        <input type="file" name="upload1" accept="image/*" id = 'file1'>
+                  </form> 
+            </div>
+            <div id= 'grid2' class = 'grid'>
+                <img src = "{% static 'img/uploaded_img/2.jpg' %}">
+                <form method="post" enctype="multipart/form-data" id = 'form2'>
+                    {% csrf_token %}
+                      {{form}}
+                        <input type="file" name="upload2" accept="image/*" id = 'file2'>
+                  </form> 
+            </div>
+            <div id= 'grid3' class = 'grid'>
+                <img src = "{% static 'img/uploaded_img/3.jpg' %}">
+                <form method="post" enctype="multipart/form-data" id = 'form3'>
+                    {% csrf_token %}
+                      {{form}}
+                        <input type="file" name="upload3" accept="image/*" id = 'file3'>
+                  </form> 
+            </div>
+            <div id= 'grid4' class = 'grid'>
+                <img src = "{% static 'img/uploaded_img/4.jpg' %}">
+                <form method="post" enctype="multipart/form-data" id = 'form4'>
+                    {% csrf_token %}
+                      {{form}}
+                        <input type="file" name="upload4" accept="image/*" id = 'file4'>
+                  </form> 
+            </div>
+            <div id= 'grid5' class = 'grid'>
+                <img src = "{% static 'img/uploaded_img/5.jpg' %}">
+                <form method="post" enctype="multipart/form-data" id = 'form5'>
+                    {% csrf_token %}
+                      {{form}}
+                        <input type="file" name="upload5" accept="image/*" id = 'file5'>
+                  </form>    
+            </div>
+            <div id= 'grid6' class = 'grid'>
+                <img src = "{% static 'img/uploaded_img/6.jpg' %}">
+                <form method="post" enctype="multipart/form-data" id = 'form6'>
+                    {% csrf_token %}
+                      {{form}}
+                        <input type="file" name="upload6" accept="image/*" id = 'file6'>
+                  </form>
+            </div>
+        {% endblock %}
+    </section>
+</body>

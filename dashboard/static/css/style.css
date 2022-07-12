@@ -1,0 +1,70 @@
+:root {
+    --header-height: 50px;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    width: 100%;
+    height: var(--header-height);
+    background-color: #0d1b26;
+    display: grid;
+    grid-template-columns: auto auto 10%;
+}
+header img {
+    height: var(--header-height);
+}
+header p,
+a {
+    height: 100%;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    transition: 0.3s;
+    text-decoration: none;
+    color: white;
+}
+
+#btn a:hover,
+p:hover {
+    background-color: #46535e;
+    cursor: pointer;
+}
+section {
+    width: 100%;
+    height: calc(100% - var(--header-height));
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: #f0f0f0;
+}
+section div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(50vh - calc(var(--header-height) / 2));
+}
+section img {
+    max-width: 95%;
+    max-height: 95%;
+    display: block;
+    object-fit: contain;
+}
+.grid {
+    background-size: auto 95%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.grid img {
+    margin-bottom: 20px;
+    max-height: 70%;
+    opacity: 0.7;
+}
