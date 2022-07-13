@@ -1,8 +1,16 @@
 #btn-upload-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+#btn-upload-list p {
+    color: #fff;
+    font-size: 40px;
 }
 #btn-upload-list a:hover {
     background-color: #46535e;
     cursor: pointer;
+}
+#title:hover {
+    cursor: default;
+    background-color: #0d1b26;
 }
