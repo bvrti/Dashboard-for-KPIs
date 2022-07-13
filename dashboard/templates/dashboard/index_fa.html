@@ -1,0 +1,33 @@
+<!DOCTYPE='html'>
+<html lang = 'pl'>
+
+<head>
+    <title>{% block title %}Image Dashboard{% endblock %}</title>
+    <meta charset = 'utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+
+    <header>
+        {% block header %}
+            <img src="{% static 'img/logo.png' %}">
+            <p id = 'area'>FA<p>
+            <a id = 'btn' href = '../login/'>Zaloguj się</a>
+        {% endblock %}
+    </header>
+    <section>
+        {% block content %}
+        <div id= 'grid1'><img src = "{% static 'img/uploaded_img/fa/1.jpg' %}"></div>
+        <div id= 'grid2'><img src = "{% static 'img/uploaded_img/fa/2.jpg' %}"></div>
+        <div id= 'grid3'><img src = "{% static 'img/uploaded_img/fa/3.jpg' %}"></div>
+        <div id= 'grid4'><img src = "{% static 'img/uploaded_img/fa/4.jpg' %}"></div>
+        <div id= 'grid5'><img src = "{% static 'img/uploaded_img/fa/5.jpg' %}"></div>
+        <div id= 'grid6'><img src = "{% static 'img/uploaded_img/fa/6.jpg' %}"></div>
+        {% endblock %}
+    </section>
+</body>

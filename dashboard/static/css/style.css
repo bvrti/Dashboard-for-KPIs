@@ -10,7 +10,7 @@ header {
     height: var(--header-height);
     background-color: #0d1b26;
     display: grid;
-    grid-template-columns: auto auto 10%;
+    grid-template-columns: auto 40% 10%;
 }
 header img {
     height: var(--header-height);
@@ -33,6 +33,14 @@ a {
 p:hover {
     background-color: #46535e;
     cursor: pointer;
+}
+#area {
+    font-size: 40px;
+    text-align: left;
+}
+#area:hover {
+    background-color: #0d1b26;
+    cursor: default;
 }
 section {
     width: 100%;

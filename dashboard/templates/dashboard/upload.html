@@ -2,12 +2,17 @@
 {% block head %}
     {% load static %}
     <script src = "{% static 'js/upload.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/upload.css' %}">
 {% endblock %}
 <body>
     <header>
         {% block header %}
             <img src="{% static 'img/logo.png' %}">
-            <p>Kliknij na zdjęcie, aby przesłać nowe!</p>
+            <div id = 'btn-upload-list'>
+              <a href = '../uploadSmt/' >SMT</a>
+              <a href = '../uploadCba/' >CBA</a>
+              <a href = '../uploadFa/' >FA</a>
+            </div>
             <p id = 'btn'><a href = '../logout/'>Wyloguj się</a><p>
         {% endblock %}
     </header>

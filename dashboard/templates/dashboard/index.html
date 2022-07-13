@@ -5,6 +5,9 @@
     <title>{% block title %}Image Dashboard{% endblock %}</title>
     <meta charset = 'utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
     {% load static %}
         <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
         <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
@@ -16,7 +19,7 @@
     <header>
         {% block header %}
             <img src="{% static 'img/logo.png' %}">
-            <p><p>
+            <p id = 'area'>Common<p>
             <a id = 'btn' href = 'login/'>Zaloguj się</a>
         {% endblock %}
     </header>
