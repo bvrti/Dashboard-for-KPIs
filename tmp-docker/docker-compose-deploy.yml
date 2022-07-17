@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  app:
+    build:
+      context: .
+    volumes:
+      - static_data:/dashboard/static
+
+  # proxy:
+  #   build:
+  #     context: ./proxy
+  #   volumes:
+  #     - static_data:/dashboard/static
+  #   ports:
+  #     - "123:1234"
+  #   depends_on:
+  #     - app
+
+volumes:
+  static_data:
