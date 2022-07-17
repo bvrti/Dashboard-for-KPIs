@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    'app',
     'dashboard',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -126,12 +127,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = 'dashboard/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'dashboard/static')
 
-
-MEDIA_URL = 'dashboard/static/img/uploaded_img/'
-MEDIA_ROOT = 'dashboard/static/img/uploaded_img/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'dashboard/static/img/uploaded_img')
+MEDIA_URL = 'dashboard/uploaded_img/'
+MEDIA_ROOT = 'dashboard/uploaded_img/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'dashboard/uploaded_img')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

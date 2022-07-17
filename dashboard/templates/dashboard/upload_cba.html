@@ -21,7 +21,7 @@
     <section>
         {% block content %}
             <div id= 'grid1' class = 'grid'>
-                <img src = "{% static 'img/uploaded_img/cba/1.jpg' %}">
+                <img src = "{% get_media_prefix %}/cba/1.jpg">
                 <form method="post" enctype="multipart/form-data" id = 'form1'>
                     {% csrf_token %}
                       {{form}}
@@ -29,7 +29,7 @@
                   </form> 
             </div>
             <div id= 'grid2' class = 'grid'>
-                <img src = "{% static 'img/uploaded_img/cba/2.jpg' %}">
+                <img src = "{% get_media_prefix %}cba/2.jpg">
                 <form method="post" enctype="multipart/form-data" id = 'form2'>
                     {% csrf_token %}
                       {{form}}
@@ -37,7 +37,7 @@
                   </form> 
             </div>
             <div id= 'grid3' class = 'grid'>
-                <img src = "{% static 'img/uploaded_img/cba/3.jpg' %}">
+                <img src = "{% get_media_prefix %}/cba/3.jpg">
                 <form method="post" enctype="multipart/form-data" id = 'form3'>
                     {% csrf_token %}
                       {{form}}
@@ -45,7 +45,7 @@
                   </form> 
             </div>
             <div id= 'grid4' class = 'grid'>
-                <img src = "{% static 'img/uploaded_img/cba/4.jpg' %}">
+                <img src = "{% get_media_prefix %}/cba/4.jpg">
                 <form method="post" enctype="multipart/form-data" id = 'form4'>
                     {% csrf_token %}
                       {{form}}
@@ -53,7 +53,7 @@
                   </form> 
             </div>
             <div id= 'grid5' class = 'grid'>
-                <img src = "{% static 'img/uploaded_img/cba/5.jpg' %}">
+                <img src = "{% get_media_prefix %}/cba/5.jpg">
                 <form method="post" enctype="multipart/form-data" id = 'form5'>
                     {% csrf_token %}
                       {{form}}
@@ -61,7 +61,7 @@
                   </form>    
             </div>
             <div id= 'grid6' class = 'grid'>
-                <img src = "{% static 'img/uploaded_img/cba/6.jpg' %}">
+                <img src = "{% get_media_prefix %}/cba/6.jpg">
                 <form method="post" enctype="multipart/form-data" id = 'form6'>
                     {% csrf_token %}
                       {{form}}

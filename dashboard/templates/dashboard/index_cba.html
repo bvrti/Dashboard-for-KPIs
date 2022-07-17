@@ -22,12 +22,12 @@
     </header>
     <section>
         {% block content %}
-        <div id= 'grid1'><img src = "{% static 'img/uploaded_img/cba/1.jpg' %}"></div>
-        <div id= 'grid2'><img src = "{% static 'img/uploaded_img/cba/2.jpg' %}"></div>
-        <div id= 'grid3'><img src = "{% static 'img/uploaded_img/cba/3.jpg' %}"></div>
-        <div id= 'grid4'><img src = "{% static 'img/uploaded_img/cba/4.jpg' %}"></div>
-        <div id= 'grid5'><img src = "{% static 'img/uploaded_img/cba/5.jpg' %}"></div>
-        <div id= 'grid6'><img src = "{% static 'img/uploaded_img/cba/6.jpg' %}"></div>
+        <div id= 'grid1'><img src = "{% get_media_prefix %}/cba/1.jpg"></div>
+        <div id= 'grid2'><img src = "{% get_media_prefix %}/cba/2.jpg"></div>
+        <div id= 'grid3'><img src = "{% get_media_prefix %}/cba/3.jpg"></div>
+        <div id= 'grid4'><img src = "{% get_media_prefix %}/cba/4.jpg"></div>
+        <div id= 'grid5'><img src = "{% get_media_prefix %}/cba/5.jpg"></div>
+        <div id= 'grid6'><img src = "{% get_media_prefix %}/cba/6.jpg"></div>
         {% endblock %}
     </section>
 </body>
