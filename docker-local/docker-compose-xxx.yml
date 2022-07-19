@@ -1,0 +1,13 @@
+pds-kpi-dashboard:
+   image: packaging
+   container_name: pds-kpi-dashboard
+   restart: always
+pds-kpi-dashboard-nginx:
+   image: nginx
+   container_name: pds-kpi-dashboard-nginx
+   restart: always
+   volumes:
+     - pds-kpi-dashboard-nginx-vol:/etc/nginx/conf.d
+     - pds-kpi-dashboard-nginx:/static/
+   ports:
+     - 5556:80

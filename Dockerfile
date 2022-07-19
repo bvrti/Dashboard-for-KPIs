@@ -1,13 +1,14 @@
 FROM python:3.10
 
-ENV PATH="/scripts:${PATH}"
 
-# install requirements 
+RUN apt-get update
 COPY ./requirements.txt /requirements.txt
 RUN pip install -r /requirements.txt
 
-# prepare dirs
-WORKDIR /app
-ADD . /app
-COPY . /app
+RUN mkdir -p /var/django/projects/dashboard
+COPY . /var/django/projects/dashboard
+WORKDIR /var/django/projects/dashboard
 
+EXPOSE 8880
+
+CMD ["bash", "./dashboard_start.sh"]

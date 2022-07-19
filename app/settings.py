@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-7c@%e!wo#zg@ci5hnt#(&jqlxb-z!-k%#w1(+fvgiehi!g9k(7
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-
+CSRF_TRUSTED_ORIGINS = ['http://blo-ve2.delphidrive.com:8822']
 
 # Application definition
 
@@ -127,12 +127,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'dashboard/static/'
+STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'dashboard/static')
 
-MEDIA_URL = 'dashboard/uploaded_img/'
-MEDIA_ROOT = 'dashboard/uploaded_img/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'dashboard/uploaded_img')
+MEDIA_URL = '/media/'
+# MEDIA_ROOT = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
